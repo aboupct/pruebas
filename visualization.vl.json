@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/aboupct/pruebas/main/data_2.csv"
+    "url": "https://raw.githubusercontent.com/aboupct/pruebas/main/data_2.csv",
   "encoding": {
     "x": {
       "field": "Curso_abreviado",
