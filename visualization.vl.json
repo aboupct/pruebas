@@ -44,10 +44,10 @@
   "layer": [{
     "mark": {"type":"bar", "tooltip": true }
   }, {
-    "mark1": {"type": "text"},
-    "encoding1": {
+    "mark": {"type": "text"},
+    "encoding": {
      "text": { "field": "Matriculados conjunta"}, 
-     "color": {"value": "white"}
+     "color": {"value": false}
     }
   }],
   "config": {
