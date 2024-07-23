@@ -1,10 +1,9 @@
 {
-  "width": 500,
-  "height": 200,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/aboupct/pruebas/main/data_2.csv"
   },  
+  "width": 500, "height": 200,
   "encoding": {
     "x": {
       "field": "Curso_abreviado",
@@ -45,7 +44,7 @@
   "layer": [{
     "mark": {"type":"bar", "tooltip": true }
   }, {
-    "mark": {"type": "text"},
+    "mark1": {"type": "text"},
     "encoding": {
      "text": { "field": "Matriculados conjunta"}, 
      "color": {"value": "white"}
