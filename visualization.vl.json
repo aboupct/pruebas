@@ -45,7 +45,7 @@
     "mark": {"type":"bar", "tooltip": true }
   }, {
     "mark1": {"type": "text"},
-    "encoding": {
+    "encoding1": {
      "text": { "field": "Matriculados conjunta"}, 
      "color": {"value": "white"}
     }
