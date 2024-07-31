@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500, "height": 200,
+  "data": {
+    "url": "fichero_csv_datos"
+  },
+  "params": [{
+    "name": "industry",
+    "select": {"type": "point", "fields": ["Nivel Académico"]},
+    "bind": "legend"
+  }],  
+  "encoding": {
+    "x": {
+      "field": "Curso_abreviado",
+      "type": "ordinal",
+      "axis": {
+        "labelAngle": 0,
+        "ticks": false,
+        "title": null
+      }
+    },
+    "y": {
+      "field": "Matriculados conjunta",
+      "type": "quantitative",
+      "axis": {
+        "ticks": false,
+        "title": null
+      }
+    },
+    "color": {
+      "field": "Nivel Académico",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Grado",
+          "Máster",
+          "Doctorado"
+        ],
+        "range": [
+          "#0C58A5",
+          "#5BC5F2",
+          "#163558"
+        ]
+      },
+      "title": "Nivel Académico"
+    },
+    "order": {"field": "Nivel Académico_ID"},
+    "opacity": {
+      "condition": {"param": "industry", "value": 1},
+      "value": 0.2
+    }    
+  },
+  "layer": [{
+    "mark": {"type":"bar", "tooltip": true }
+  }, {
+    "mark1": {"type": "text"},
+    "encoding": {
+     "text": { "field": "Matriculados conjunta"}, 
+     "color": {"value": "white"}
+    }
+  }],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false, "domain": false}
+  }
+}
