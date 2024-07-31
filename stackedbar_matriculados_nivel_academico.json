@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "fichero_csv_datos"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Curso_abreviado", "type": "ordinal"},
+    "y": {"field": "Matriculados conjunta", "type": "quantitative"},
+    "color": {
+      "field": "Nivel Académico",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Grado", "Máster", "Doctorado"],
+        "range": ["#0C58A5", "#5BC5F2", "#163558"]
+      },
+      "title": "Nivel Académico"
+    },
+    "order": {"field": "Nivel Académico_ID"}
+  },
+  "config": {}
+}
